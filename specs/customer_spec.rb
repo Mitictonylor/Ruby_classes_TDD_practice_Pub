@@ -31,6 +31,10 @@ class CustomerTest < MiniTest::Test
     assert_equal(0, @customer.drunkenness())
   end
 
+  def test_reduce_money()
+    @customer.buy_drink(@drink)
+    assert_equal(8.00, @customer.wallet())
+  end
 
 
 
@@ -77,8 +81,6 @@ class CustomerTest < MiniTest::Test
 
 
 
-
-  
   #
   # def test_sufficient_funds__true_if_enough
   #   assert_equal(true, @customer.sufficient_funds?(@drink))

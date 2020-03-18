@@ -9,9 +9,12 @@ class Customer
     @drunkenness = drunkenness
   end
 
-
-
-
+  def buy_drink(drink)
+    if @age >= 18
+    @wallet -= drink.price
+    @drunkenness += drink.alcohol_level
+    end
+  end
 
 
 
